@@ -1,0 +1,22 @@
+FoodApp/
+├── CLAUDE.md            our working agreement
+├── README.md            what it is, how to run it
+├── requirements.txt     Flask, basically
+├── .gitignore           venv/, __pycache__/, *.db
+│
+├── app.py               Flask routes — kept deliberately thin
+├── db.py                open/close SQLite connections
+├── schema.sql           CREATE TABLE statements
+├── seed.py              one-off script: JSON → SQLite
+├── matching.py          the brain: does this item fit these restrictions?
+│
+├── data/
+│   ├── restaurants.json your hand-made fake data
+│   └── foodapp.db       generated — never edited by hand
+│
+├── static/
+│   ├── style.css
+│   └── main.js          calls the API, draws results
+│
+└── templates/
+    └── index.html       the page
