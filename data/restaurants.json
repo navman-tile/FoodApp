@@ -1,0 +1,23 @@
+[
+  {
+    "name": "Naveen's Fork",
+    "city": "Sydney",
+    "menu": [
+      {
+        "name": "Lentil Power Bowl",
+        "description": "Brown lentils, roasted sweet potato, kale, tahini drizzle",
+        "tags": ["vegan", "vegetarian", "gluten-free", "dairy-free", "nut-free"]
+      },
+      {
+        "name": "Duck Soup",
+        "description": "Brown lentils, roasted duck, herbs, spices",
+        "tags": ["gluten-free", "dairy-free", "nut-free", "spicy"]
+      },
+      {
+        "name": "Chicken Sandwich",
+        "description": "Chicken strips, taoted bread, lettuce, tomato drizzle",
+        "tags": ["nut-free"]
+      }
+    ]
+  }
+]
