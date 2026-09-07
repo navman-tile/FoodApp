@@ -1,22 +1,204 @@
 [
   {
+    "name": "Green Fork",
+    "city": "Austin",
+    "menu": [
+      {
+        "name": "Lentil Power Bowl",
+        "description": "Brown lentils, roasted sweet potato, kale, tahini drizzle",
+        "tags": ["vegan", "vegetarian", "gluten-free", "dairy-free", "nut-free", "halal", "kosher"]
+      },
+      {
+        "name": "Black Bean Tacos",
+        "description": "Black beans, corn tortillas, salsa, avocado, cilantro",
+        "tags": ["vegan", "vegetarian", "gluten-free", "dairy-free", "nut-free", "halal", "kosher", "spicy"]
+      },
+      {
+        "name": "Halloumi Salad",
+        "description": "Grilled halloumi, cucumber, tomato, mint, olive oil",
+        "tags": ["vegetarian", "gluten-free", "nut-free", "halal", "kosher"]
+      },
+      {
+        "name": "Spicy Peanut Noodles",
+        "description": "Rice noodles, peanut sauce, chili, scallion",
+        "tags": ["vegan", "vegetarian", "gluten-free", "dairy-free", "halal", "kosher", "spicy"]
+      }
+    ]
+  },
+  {
+    "name": "Smoke House BBQ",
+    "city": "Austin",
+    "menu": [
+      {
+        "name": "Beef Brisket Plate",
+        "description": "Smoked beef brisket, pickles, sliced white bread",
+        "tags": ["dairy-free", "nut-free"]
+      },
+      {
+        "name": "Pulled Pork Sandwich",
+        "description": "Pulled pork, brioche bun, coleslaw",
+        "tags": ["nut-free"]
+      },
+      {
+        "name": "Grilled Chicken Thighs",
+        "description": "Marinated chicken thighs, chimichurri",
+        "tags": ["gluten-free", "dairy-free", "nut-free", "halal"]
+      },
+      {
+        "name": "Smoked Sausage Link",
+        "description": "Pork sausage, yellow mustard",
+        "tags": ["gluten-free", "dairy-free", "nut-free"]
+      }
+    ]
+  },
+  {
+    "name": "Rain City Vegan",
+    "city": "Portland",
+    "menu": [
+      {
+        "name": "Jackfruit Burger",
+        "description": "Pulled jackfruit, vegan brioche bun, lettuce, tomato",
+        "tags": ["vegan", "vegetarian", "dairy-free", "nut-free", "halal", "kosher"]
+      },
+      {
+        "name": "Cashew Mac",
+        "description": "Macaroni in a cashew cream sauce, breadcrumb topping",
+        "tags": ["vegan", "vegetarian", "dairy-free", "halal", "kosher"]
+      },
+      {
+        "name": "Buffalo Cauliflower",
+        "description": "Roasted cauliflower, hot sauce, celery sticks",
+        "tags": ["vegan", "vegetarian", "gluten-free", "dairy-free", "nut-free", "halal", "kosher", "spicy"]
+      },
+      {
+        "name": "Coconut Curry Bowl",
+        "description": "Mixed vegetables, coconut-milk curry, steamed rice",
+        "tags": ["vegan", "vegetarian", "gluten-free", "dairy-free", "nut-free", "halal", "kosher", "spicy"]
+      }
+    ]
+  },
+  {
+    "name": "Blue Heron Seafood",
+    "city": "Portland",
+    "menu": [
+      {
+        "name": "Grilled Salmon",
+        "description": "Wild salmon fillet, lemon, roasted asparagus",
+        "tags": ["gluten-free", "dairy-free", "nut-free", "halal", "kosher"]
+      },
+      {
+        "name": "Fish & Chips",
+        "description": "Beer-battered cod, thick-cut fries, tartar sauce",
+        "tags": ["dairy-free", "nut-free"]
+      },
+      {
+        "name": "Shrimp Ceviche",
+        "description": "Shrimp cured in lime, red onion, cilantro, chili",
+        "tags": ["gluten-free", "dairy-free", "nut-free", "halal", "spicy"]
+      },
+      {
+        "name": "Clam Chowder",
+        "description": "Clams, cream, potato, bacon",
+        "tags": ["nut-free"]
+      }
+    ]
+  },
+  {
     "name": "Naveen's Fork",
     "city": "Sydney",
     "menu": [
       {
         "name": "Lentil Power Bowl",
         "description": "Brown lentils, roasted sweet potato, kale, tahini drizzle",
-        "tags": ["vegan", "vegetarian", "gluten-free", "dairy-free", "nut-free"]
+        "tags": ["vegan", "vegetarian", "gluten-free", "dairy-free", "nut-free", "halal", "kosher"]
       },
       {
         "name": "Duck Soup",
         "description": "Brown lentils, roasted duck, herbs, spices",
-        "tags": ["gluten-free", "dairy-free", "nut-free", "spicy"]
+        "tags": ["gluten-free", "dairy-free", "nut-free", "halal", "spicy"]
       },
       {
         "name": "Chicken Sandwich",
-        "description": "Chicken strips, taoted bread, lettuce, tomato drizzle",
+        "description": "Chicken strips, toasted bread, lettuce, tomato",
+        "tags": ["dairy-free", "nut-free", "halal"]
+      }
+    ]
+  },
+  {
+    "name": "Harbour Grill",
+    "city": "Sydney",
+    "menu": [
+      {
+        "name": "Lamb Kofta",
+        "description": "Spiced lamb skewers, flatbread, yogurt sauce",
+        "tags": ["nut-free", "halal", "spicy"]
+      },
+      {
+        "name": "Falafel Wrap",
+        "description": "Falafel, hummus, salad, flatbread",
+        "tags": ["vegan", "vegetarian", "dairy-free", "nut-free", "halal", "kosher"]
+      },
+      {
+        "name": "Grilled Halloumi Plate",
+        "description": "Halloumi, roasted vegetables, olive oil",
+        "tags": ["vegetarian", "gluten-free", "nut-free", "halal", "kosher"]
+      },
+      {
+        "name": "Beef Burger",
+        "description": "Beef patty, cheddar, sesame bun, pickles",
+        "tags": ["nut-free", "halal"]
+      }
+    ]
+  },
+  {
+    "name": "Laneway Kitchen",
+    "city": "Melbourne",
+    "menu": [
+      {
+        "name": "Mushroom Risotto",
+        "description": "Arborio rice, mushrooms, parmesan, butter",
+        "tags": ["vegetarian", "gluten-free", "nut-free"]
+      },
+      {
+        "name": "Vegan Pho",
+        "description": "Rice noodles, tofu, vegetable broth, herbs, chili",
+        "tags": ["vegan", "vegetarian", "gluten-free", "dairy-free", "nut-free", "halal", "kosher", "spicy"]
+      },
+      {
+        "name": "Fried Chicken Bao",
+        "description": "Fried chicken, steamed bun, pickles, sriracha",
+        "tags": ["dairy-free", "nut-free", "halal", "spicy"]
+      },
+      {
+        "name": "Chocolate Walnut Brownie",
+        "description": "Flour, butter, eggs, walnuts",
+        "tags": ["vegetarian"]
+      }
+    ]
+  },
+  {
+    "name": "Two Trees Cafe",
+    "city": "Melbourne",
+    "menu": [
+      {
+        "name": "Avocado Toast",
+        "description": "Sourdough, smashed avocado, chili flakes, lime",
+        "tags": ["vegan", "vegetarian", "dairy-free", "nut-free", "halal", "kosher", "spicy"]
+      },
+      {
+        "name": "Acai Bowl",
+        "description": "Acai, banana, mixed berries, granola",
+        "tags": ["vegan", "vegetarian", "dairy-free", "halal", "kosher"]
+      },
+      {
+        "name": "Bacon & Egg Roll",
+        "description": "Bacon, fried egg, milk bun, barbecue sauce",
         "tags": ["nut-free"]
+      },
+      {
+        "name": "Chia Pudding",
+        "description": "Chia seeds, coconut milk, fresh mango",
+        "tags": ["vegan", "vegetarian", "gluten-free", "dairy-free", "nut-free", "halal", "kosher"]
       }
     ]
   }
