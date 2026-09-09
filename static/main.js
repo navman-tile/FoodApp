@@ -26,9 +26,9 @@ form.addEventListener("submit", async (event) => {
     // Each input has an id ("restrictions", "preferences", "location").
     // getElementById(...).value gives you what the user typed, as a string.
     // Put them in three variables named restrictions, preferences, location.
-    const restrictions = "";  // <-- replace
-    const preferences = "";   // <-- replace
-    const location = "";      // <-- replace
+    const restrictions = document.getElementById("restrictions").value;  // <-- replace
+    const preferences = document.getElementById("preferences").value;   // <-- replace
+    const location = document.getElementById("location").value;      // <-- replace
 
     // Build the query string. URLSearchParams turns an object into
     // "restrictions=...&preferences=...&location=..." and escapes special
@@ -77,5 +77,22 @@ function renderResults(items) {
     //   gives you an array of HTML strings; .join("") glues them into one.
     //   item.tags is an array -- item.tags.join(", ") makes it a string.
     //   Assign the final string to resultsDiv.innerHTML.
-    resultsDiv.innerHTML = "";  // <-- replace
+    // resultsDiv.innerHTML = items.map(item => '    <div class="result">
+    //      <h3>${item.name} — ${item.restaurant}</h3>
+    //      <p>${item.description}</p>
+    //      <p class="tags">${item.tags.join(", ")}</p>
+    // </div>' );  // <-- replace
+
+    resultsDiv.innerHTML = items.map(item => `
+        <div class="result">
+            <h3>${item.name} — ${item.restaurant}</h3>
+            <p>${item.description}</p>
+            <p class="tags">${item.tags.join(", ")}</p>
+        </div>
+    `).join("");
+
+
+    
+
+    return;
 }
