@@ -82,6 +82,7 @@ def api_search():
 
     # restrictions = restrictions_raw.split(",")
     # preferences = preferences_raw.split(",")
+    # explain the line below
     restrictions = [t for t in restrictions_raw.split(",") if t]
     preferences = [t for t in preferences_raw.split(",") if t]
 
