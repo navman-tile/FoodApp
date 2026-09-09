@@ -1,0 +1,37 @@
+# GitHub Actions workflow: run the test suite on every push and pull request.
+#
+# GitHub looks for YAML files in .github/workflows/ automatically. The results
+# show up in the repo's "Actions" tab and as a check mark (or X) on each commit.
+
+name: tests
+
+# When to run this workflow.
+on:
+  push:              # every push, any branch
+  pull_request:      # and every pull request
+
+jobs:
+  pytest:                       # job name (shown in the Actions UI)
+    runs-on: ubuntu-latest      # GitHub gives us a fresh Linux VM each run
+
+    steps:
+      # 1. Copy the repo's code onto the VM.
+      - name: Check out the code
+        uses: actions/checkout@v4
+
+      # 2. Install Python. Match this to the version you run locally
+      #    (check with `python --version`); 3.12 is a safe default.
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      # 3. Install the project's dependencies from requirements.txt
+      #    (must include Flask and pytest).
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      # 4. Run the tests. A non-zero exit code here fails the whole workflow,
+      #    which is what turns the commit's check mark red.
+      - name: Run pytest
+        run: pytest
