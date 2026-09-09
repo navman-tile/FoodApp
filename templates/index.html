@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FoodApp — find dishes that fit</title>
+    <!-- Flask serves everything in static/ at the /static/ URL prefix. -->
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <main>
+        <h1>Find dishes that fit</h1>
+
+        <!--
+          The form. Each field has an id -- main.js looks each one up by its
+          id to read what was typed. Tags are entered comma-separated, matching
+          how the API expects them (?restrictions=vegan,gluten-free).
+        -->
+        <form id="search-form">
+            <label>
+                Restrictions (must have all)
+                <input id="restrictions" type="text"
+                       placeholder="vegan, gluten-free">
+            </label>
+
+            <label>
+                Preferences (ranked higher)
+                <input id="preferences" type="text"
+                       placeholder="spicy">
+            </label>
+
+            <label>
+                City
+                <input id="location" type="text"
+                       placeholder="Sydney">
+            </label>
+
+            <button type="submit">Search</button>
+        </form>
+
+        <!-- main.js writes the results into this div. Starts empty. -->
+        <div id="results"></div>
+    </main>
+
+    <!--
+      Loaded at the end of <body> so the form and #results already exist in
+      the page by the time this script runs.
+    -->
+    <script src="/static/main.js"></script>
+</body>
+</html>
