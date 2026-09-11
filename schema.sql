@@ -8,8 +8,12 @@
 
 -- Drop the CHILD table first. menu_items points at restaurants via a foreign
 -- key, so restaurants can't be dropped while menu_items still references it.
+DROP TABLE IF EXISTS item_tags;
 DROP TABLE IF EXISTS menu_items;
+DROP TABLE IF EXISTS tags;
 DROP TABLE IF EXISTS restaurants;
+
+
 
 
 -- -----------------------------------------------------------------------------
@@ -51,6 +55,16 @@ CREATE TABLE menu_items (
     id INTEGER PRIMARY KEY,
     restaurant_id INTEGER NOT NULL REFERENCES restaurants(id),
     name TEXT NOT NULL,
-    description TEXT,
-    tags TEXT NOT NULL
+    description TEXT
+);
+
+CREATE TABLE tags (
+    id   INTEGER PRIMARY KEY,
+    name TEXT NOT NULL UNIQUE          -- "vegan", "gluten-free", ... one row each
+);
+
+CREATE TABLE item_tags (              -- the "junction" / "join" table
+    item_id INTEGER NOT NULL REFERENCES menu_items(id),
+    tag_id  INTEGER NOT NULL REFERENCES tags(id),
+    PRIMARY KEY (item_id, tag_id)     -- each pairing appears at most once
 );

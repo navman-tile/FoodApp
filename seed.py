@@ -32,12 +32,26 @@ def main():
         restaurant_id = cursor.lastrowid
 
         for item in restaurant["menu"]:
-            tags_str = ",".join(item["tags"])
-            item.get("description")
-            connection.execute(
-                "INSERT INTO menu_items (restaurant_id, name, description, tags) VALUES (?, ?, ?, ?)",
-                (restaurant_id, item["name"], item["description"], tags_str)
+            # tags_str = ",".join(item["tags"])
+            # item.get("description")
+            
+            cursor = connection.execute(
+                "INSERT INTO menu_items (restaurant_id, name, description) VALUES (?, ?, ?)",
+                (restaurant_id, item["name"], item["description"])
             )
+            item_id = cursor.lastrowid
+
+            for tag in item["tags"]:
+                connection.execute("INSERT OR IGNORE INTO tags (name) VALUES (?)", (tag,))
+                tag_id = connection.execute(
+                    "SELECT id FROM tags WHERE name = ?", (tag,)
+                ).fetchone()["id"]
+                connection.execute(
+                "INSERT INTO item_tags (item_id, tag_id) VALUES (?, ?)", (item_id, tag_id) 
+                )
+            
+            
+
             item_count += 1
 
         restaurant_count += 1

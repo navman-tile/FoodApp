@@ -159,9 +159,12 @@ if __name__ == "__main__":
                r.city        AS city,
                m.name        AS name,
                m.description AS description,
-               m.tags        AS tags
+               GROUP_CONCAT(t.name) AS tags        -- glue this item's tag names back into "a,b,c"
         FROM menu_items m
-        JOIN restaurants r ON r.id = m.restaurant_id
+        JOIN restaurants r  ON r.id = m.restaurant_id
+        JOIN item_tags it   ON it.item_id = m.id
+        JOIN tags t         ON t.id = it.tag_id
+        GROUP BY m.id                              -- one output row per dish
         """
     ).fetchall()
     connection.close()
